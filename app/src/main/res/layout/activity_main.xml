@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/variant1"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/buttonstyle"
+        android:text="Take Picture"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/BSelectImage"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/buttonstyle"
+        android:text="select Picture"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="370sp"
+        android:layout_height="370sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10sp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="190dp"
+        android:layout_height="250dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/imageView" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bgg1">
+
+            <TextView
+                android:id="@+id/classified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10sp"
+                android:text="CLASSIFIED AS :"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text=""
+                android:layout_marginTop="5dp"
+                android:textColor="#C30000"
+                android:textStyle="bold"
+                android:textSize="27sp"
+                android:id="@+id/result"
+                android:layout_below="@+id/classified"
+                />
+
+            <TextView
+                android:id="@+id/confidencesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/result"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="ACCURACY : "
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/confidence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/confidencesText"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="#000"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="190dp"
+        android:layout_height="250dp"
+        android:id="@+id/learn"
+        android:visibility="gone"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bgg1_rotate">
+        <TextView
+            android:id="@+id/learnmore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="70dp"
+            android:text="FOR MORE ABOUT"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/result2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="90dp"
+                android:text=""
+                android:layout_centerHorizontal="true"
+                android:textColor="#C30000"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:text="LEARN"
+            android:background="@drawable/buttonstyle"
+            android:layout_marginTop="150dp"
+            android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
