@@ -7,6 +7,18 @@
     android:background="@drawable/variant1"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/st1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/button"
+        android:layout_centerInParent="true"
+        android:text="SELECT BELOW TO DETECT YOUR POSE ."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
         android:layout_width="185dp"
@@ -47,10 +59,13 @@
         android:layout_marginTop="10sp" />
 
 
+
     <androidx.cardview.widget.CardView
         android:layout_width="190dp"
         android:layout_height="250dp"
         android:layout_marginLeft="10dp"
+        android:visibility="gone"
+        android:id="@+id/classification"
         android:layout_below="@+id/imageView" >
         <RelativeLayout
             android:layout_width="match_parent"

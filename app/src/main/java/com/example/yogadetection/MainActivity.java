@@ -32,11 +32,11 @@ import java.nio.ByteOrder;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView result, confidence,result2;
+    TextView result, confidence,result2,select;
     ImageView imageView;
     Button picture;
     Button BSelectImage;
-    CardView c1;
+    CardView c1,c2;
     int imageSize = 224;
     int SELECT_PICTURE = 200;
 
@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
         result = findViewById(R.id.result);
         result2 = findViewById(R.id.result2);
+        select = findViewById(R.id.st1);
+        c2 = findViewById(R.id.classification);
         confidence = findViewById(R.id.confidence);
         imageView = findViewById(R.id.imageView);
         picture = findViewById(R.id.button);
@@ -128,6 +130,8 @@ public class MainActivity extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         c1.setVisibility(View.VISIBLE);
+        c2.setVisibility(View.VISIBLE);
+        select.setAlpha(0);
         if (resultCode == RESULT_OK) {
 
             // compare the resultCode with the
