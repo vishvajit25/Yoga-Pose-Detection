@@ -9,7 +9,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
-        android:layout_width="190dp"
+        android:layout_width="185dp"
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
@@ -24,7 +24,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/BSelectImage"
-        android:layout_width="190dp"
+        android:layout_width="185dp"
         android:layout_height="50dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
